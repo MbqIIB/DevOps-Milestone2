@@ -109,6 +109,18 @@ As taught in complexity class workshop, we used the same approach and extended t
 
 Since AWS and Digital Ocean and the primary providers we have used so far, we used regular expressions to generate the pattern for security token for both of them. We wrote the script detectToken.js which checks for the same and reports the output if there is a token present in the code.
 
+1. The conditions count and long method detection are run from the file 'analysis.js' and token detection is present in 'detectToken.js'.
+2. Go to Jenkins job -> Configure -> Build, add 
+
+```
+node analysis.js
+node detectToken.js
+```
+
+All above 3 metrics are shown in this screencast. 
+
+![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone2/blob/master/Screens/4_1.gif)
+
 ##### BONUS (10 points): Detect duplicate code using an AST-based difference algorithm.
 
 We used the jsinspect library to detect the code duplication. The project's repository is 
