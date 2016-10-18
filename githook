@@ -1,0 +1,66 @@
+#!/bin/bash
+
+red="\033[0;31m"
+yellow="\033[1;33m"
+green="\033[1;32m"
+reset="\033[0m"
+NC="\033[0m"
+
+#start testing check
+echo -e "${yellow}\n Starting Unit Tests for JS Files:\n${reset}\n"
+
+#run tests on the
+npm test
+
+#check for test success or failure
+#commit or abort as per output
+testResults=$?
+if [ $testResults -eq 1 ]
+then
+    echo -e "${red}\n FAILED tests encountered.\n Commit ABORTED${reset}"
+    echo "Fetching previous commit"
+    commits=$(git log -n 2 --pretty=format:"%H")
+    previousCommit=$(echo $commits | awk '{print $2}')
+    git reset $previousCommit
+    exit 1
+else
+    echo -e "${green}\nTests passed. Commit successful.\n${reset}"
+fi
+
+#exit 0
+
+#find changed files and ignorer eslint rules file
+files=$(git diff --name-only HEAD^ HEAD | egrep '.js$' | grep -v '.eslintrc.js');
+
+#start code analysis on changes files
+
+echo -e "${yellow}\n Starting Code Analysis:\n${reset}\n"
+
+#check for static analysis errors in code files
+pass=true
+totalErrors=0
+
+if [ "$files" != "" ]; then
+    for file in ${files}; do
+        result=$(eslint ${file})
+        if [ "$result" != "" ]; then
+            echo -e "${red}$result${NC}"
+            pass=false
+            totalErrors=$((totalErrors+1))
+        fi
+        echo ""
+    done
+fi
+
+#if no errors, pass the commit, else abort the commit
+if $pass; then
+	echo -e "${green}\n Code Analysis passed. Commit successful.\n${reset}"
+    exit 0
+else
+    echo -e "${red}\n Analysis check failed.\n Commit ABORTED${reset}"
+    echo "Fetching previous commit"
+    commits=$(git log -n 2 --pretty=format:"%H")
+    previousCommit=$(echo $commits | awk '{print $2}')
+    git reset $previousCommit
+    exit 1
+fi
