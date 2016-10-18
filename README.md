@@ -55,15 +55,21 @@ Calling npm test calls the test suit, generates the report using istanbul and wr
 
 #### Advanced Testing: Implement one of the following advanced testing techniques: test priorization, test case generation, fuzzing, or flaky test quarantine.
 
-1. Create a new job. Give it a name. Choose Freestyle Project.
-	
-	![Screenshot](https://github.com/shivamgulati1991/DevOps-Milestone1/blob/master/Screens/NewJob.JPG)
-2. For configuration of Job
-   Source Code Management-> select Git under Source Code Management-> Enter your project's Git Repository URL.
-3. Under Build Environment-> select "Provide Node & npm bin/ folder to PATH"-> choose the NodeJS installation.
-4. Additionally, you can also setup multiple branches for the same job.
-5. Click Save.
-5. Test run a build - Go to Jobs and click "Build Now". The progress would be depicted as an animated circle. Blue implies a successful build and Red implies a failure.
+For this step, we implemented the constraint test case generation method similar to the coursework workshop and homeworks.
+
+1. In our main.js file, we wrote the code for test case generation and added the contraints.
+2. This file was fed to instanbul for code coverage and consumed by Cobertura Jenkins plugin similar to the step one.
+3. In Jenking job -> Build -> Execute shell
+
+```
+rm -rf node_modules
+npm install
+node main.js
+npm run customtest
+
+```
+
+4. 'node main.js' runs the test case generation and generates 'test.js' file which is run as per 'npm run customtest'. The 'package.json' file has the reference for the same. Istanbul generated the coverage and Cobertura plugin uses the same to display in Jenkins.
 
 ![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone2/blob/master/Screens/2.gif)
 
