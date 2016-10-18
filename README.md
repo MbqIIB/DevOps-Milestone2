@@ -113,25 +113,22 @@ npm test
 
 #### Gates: Using hooks or post-build scripts, have the ability to reject a commit if it fails a minimum testing criteria (e.g. failed test case, or less than 50% statement coverage) and analysis criteria (e.g. cannot commits that generate a particular FindBugs rule, such as "Method concatenates strings using + in a loop").
 
-1. Go to Manage Jenkins -> Configure System.
-2. Setup Extended E-mail Notification and E-mail notification. The below screen shows setup for Extended Configuration. Both the setups are same.
+We wrote a git hook which on commit, performs testing and analysis on the code.
 
-	![Screenshot](https://github.com/shivamgulati1991/DevOps-Milestone1/blob/master/Screens/Email1.JPG)
-3. For both of the above, we configured gmail smtp server. 
-4. Enter the SMTP details and credentials and click Save.
-5. Follow below screenshots for reference.
-   ![Configure Email 1]()
-   ![Configure Email 1]()
-6. Go the Configure page of your job-> Post-build Actions-> Post Build Action-> Choose Editable Email Notification.
+1. If the test cases fail, the commit is rejected.
+2. For the analysis, we used the eslint rules to especially check for 'no-unreachable' code area, basically if the code has unreachable code part, it is detected and the commit is rejected.
+3. If both testing criteria and analysis criteria does not result in any error, the commit is successful.
 
-	![Screenshot](https://github.com/shivamgulati1991/DevOps-Milestone1/blob/master/Screens/PostBuildAction.JPG)
-7. Now, when you build you will get the email notification for the corresponding build.
 
-Note: If the recipient is @gmail, you need to turn on the security access by using the link https://www.google.com/settings/security/lesssecureapps
+Screencast for rejecting commit with failing test case
 
 ![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone2/blob/master/Screens/5_fail1.gif)
 
+Screencast for rejecting commit with analysis
+
 ![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone2/blob/master/Screens/5_fail2.gif)
+
+Screencast for a successful commit after both testing and analysis pass
 
 ![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone2/blob/master/Screens/5_fail3.gif)
 
