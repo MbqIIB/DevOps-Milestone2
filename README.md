@@ -55,7 +55,7 @@ Calling npm test calls the test suit, generates the report using istanbul and wr
 
 #### Advanced Testing: Implement one of the following advanced testing techniques: test priorization, test case generation, fuzzing, or flaky test quarantine.
 
-For this step, we implemented the constraint test case generation method similar to the coursework workshop and homeworks.
+For this step, we implemented the constraint test case generation method similar to the coursework workshop and homeworks. We noticed that out coverage increased as per this implementation.
 
 1. In our main.js file, we wrote the code for test case generation and added the contraints.
 2. This file was fed to instanbul for code coverage and consumed by Cobertura Jenkins plugin similar to the step one.
@@ -117,7 +117,7 @@ https://github.com/danielstjules/jsinspect
 ```
 We used the same and put on top of our code. jsinspect reports duplicate code as output.
 
-![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone2/blob/master/Screens/4.gif)
+![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone2/blob/master/Screens/4_4.gif)
 
 
 #### Gates: Using hooks or post-build scripts, have the ability to reject a commit if it fails a minimum testing criteria (e.g. failed test case, or less than 50% statement coverage) and analysis criteria (e.g. cannot commits that generate a particular FindBugs rule, such as "Method concatenates strings using + in a loop").
