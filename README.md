@@ -69,7 +69,7 @@ npm run customtest
 
 ```
 
-4. 'node main.js' runs the test case generation and generates 'test.js' file which is run as per 'npm run customtest'. The 'package.json' file has the reference for the same. Istanbul generated the coverage and Cobertura plugin uses the same to display in Jenkins.
+4. 'node main.js' runs the test case generation and generates 'test.js' file which is run as per 'npm run customtest'. The 'package.json' file has the reference for the same. Istanbul generates the Cobertura coverage report and Cobertura plugin uses the same to display in Jenkins.
 
 ![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone2/blob/master/Screens/2.gif)
 
@@ -110,7 +110,7 @@ As taught in complexity class workshop, we used the same approach and extended t
 Since AWS and Digital Ocean and the primary providers we have used so far, we used regular expressions to generate the pattern for security token for both of them. We wrote the script detectToken.js which checks for the same and reports the output if there is a token present in the code.
 
 1. The conditions count and long method detection are run from the file 'analysis.js' and token detection is present in 'detectToken.js'.
-2. Go to Jenkins job -> Configure -> Build, add 
+2. Go to Jenkins job -> Configure -> Build, add the below code to the existing steps
 
 ```
 node analysis.js
@@ -128,7 +128,7 @@ We used the jsinspect library to detect the code duplication. The project's repo
 https://github.com/danielstjules/jsinspect
 ```
 
-1. Go to Job-> Configure -> Build section, we add jsinspect command to run the matching algorithm.
+1. Go to Job-> Configure -> Build section, we add 'jsinspect' command to run the code matching algorithm to find duplicates.
 
 ```
 rm -rf node_modules
