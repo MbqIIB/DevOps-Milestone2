@@ -97,18 +97,13 @@ npm run lint || :
 
 #### Custom Metrics: The ability to implement your own custom source metrics.
 
-1. Select your job and go to "Configure" option from the left pane.
-2. This was done in Task1. If not, go to Build Triggers. Check "Trigger builds remotely" and setup a token.
-3. In General tab, under Build sub-tab, select "Add a Build Step".
-4. Choose "Execute Shell".
-5. Here, you can write your script to be executed for Build process. We use NPM to install dependencies modules from package.json file and run tests during each build.
+##### Max condition: Count the max number of conditions within an if statement in a function.
+##### Long method: Detect a long methods.
+##### Free-style: Implement any analysis, such as security-token detection.
+##### BONUS (10 points): Detect duplicate code using an AST-based difference algorithm.
 
-```
-rm -rf node_modules
-npm install
-npm test
-```
-![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone1/blob/master/Screens/2.gif)
+
+![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone1/blob/master/Screens/4.gif)
 
 
 #### Gates: Using hooks or post-build scripts, have the ability to reject a commit if it fails a minimum testing criteria (e.g. failed test case, or less than 50% statement coverage) and analysis criteria (e.g. cannot commits that generate a particular FindBugs rule, such as "Method concatenates strings using + in a loop").
