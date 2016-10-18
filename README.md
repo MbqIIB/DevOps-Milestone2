@@ -77,9 +77,20 @@ npm run customtest
 
 #### Basic Analysis: The ability to run an existing static analysis tool on the source code (e.g. FindBugs, PMD, CheckStyle, NCover, Lint, etc.), process its results, and report its findings.
 
-1. Go to your Job -> Configure -> Build Triggers. Check "Trigger builds remotely" and setup a token.
-1. When the user creates a new commit to the repository, Git executes the script created for post-commit hook.
-2. We trigger the build in Jenkins whenever user does a commit. Our script looks like:
+We used eslint for basic analysis on our source code. eslint performs static analysis and outputs its results. We also used CheckStyle Jenkins plugin to display the same in Jenkins.
+
+1. Go to Manage Jenkins->Manage Plugin->Install CheckStyle plugin.
+2. Go to your Job -> Configure-> Build-> Execute shell, write this code.
+
+```
+rm -rf node_modules
+npm install
+npm test
+npm run lint || :
+```
+
+3. In your configure -> Post-build section, select Publish CheckStyle Analysis Results and leave the path blank so it takes the default on its own.
+4. Build your job. While building eslint will perform static analysis on the code and output the results and warnings to Jenkins.
 
 ![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone2/blob/master/Screens/3.gif)
 
