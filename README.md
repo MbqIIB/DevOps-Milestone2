@@ -98,8 +98,17 @@ npm run lint || :
 #### Custom Metrics: The ability to implement your own custom source metrics.
 
 ##### Max condition: Count the max number of conditions within an if statement in a function.
+
+As taught in complexity class workshop, we used the same approach and extended the code to count the conditions and report the output.
+
 ##### Long method: Detect a long methods.
+
+As taught in complexity class workshop, we used the same approach and extended the code to count the conditions and report the output. We decided 30 lines as a threshold to detect long methods for this, and any method above that results in the output with the lines of code it contains.
+
 ##### Free-style: Implement any analysis, such as security-token detection.
+
+Since AWS and Digital Ocean and the primary prooviders we haved used so far, we used regular expressions to generate the pattern for security token for both of them. We wrote the script detectToken.js which checks for the same and reports the output if there is a token present in the code.
+
 ##### BONUS (10 points): Detect duplicate code using an AST-based difference algorithm.
 
 
