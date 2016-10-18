@@ -55,7 +55,7 @@ Calling npm test calls the test suit, generates the report using istanbul and wr
 
 #### Advanced Testing: Implement one of the following advanced testing techniques: test priorization, test case generation, fuzzing, or flaky test quarantine.
 
-For this step, we implemented the constraint test case generation method similar to the coursework workshop and homeworks. We noticed that out coverage increased as per this implementation.
+For this step, we implemented the constraint test case generation method similar to the coursework workshop and homeworks. We noticed that our coverage increased as per this implementation.
 
 1. In our main.js file, we wrote the code for test case generation and added the contraints.
 2. This file was fed to instanbul for code coverage and consumed by Cobertura Jenkins plugin similar to the step one.
@@ -167,3 +167,6 @@ Sources:
 
 1. https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins
 2. https://github.com/Grantismo/climbing-grade.js
+3. https://github.com/CSC-DevOps/Complexity
+4. https://github.com/CSC-DevOps/TestGeneration
+5. https://github.com/danielstjules/jsinspect
