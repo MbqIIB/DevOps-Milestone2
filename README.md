@@ -107,7 +107,7 @@ As taught in complexity class workshop, we used the same approach and extended t
 
 ##### Free-style: Implement any analysis, such as security-token detection.
 
-Since AWS and Digital Ocean and the primary prooviders we haved used so far, we used regular expressions to generate the pattern for security token for both of them. We wrote the script detectToken.js which checks for the same and reports the output if there is a token present in the code.
+Since AWS and Digital Ocean and the primary providers we have used so far, we used regular expressions to generate the pattern for security token for both of them. We wrote the script detectToken.js which checks for the same and reports the output if there is a token present in the code.
 
 ##### BONUS (10 points): Detect duplicate code using an AST-based difference algorithm.
 
