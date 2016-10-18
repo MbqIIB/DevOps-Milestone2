@@ -105,14 +105,14 @@ As taught in complexity class workshop, we used the same approach and extended t
 
 ##### Long method: Detect a long methods.
 
-As taught in complexity class workshop, we used the same approach and extended the code to count the conditions and report the output. We decided 30 lines as a threshold to detect long methods for this, and any method above that results in the output with the lines of code it contains.
+As taught in complexity class workshop, we used the same approach and extended the code to count the conditions and report the output. We decided 30 lines as a threshold to detect long methods for this, and any method above that results in the output with the lines of code it contains. We added a AWS token to our code file to detect the same.
 
 ##### Free-style: Implement any analysis, such as security-token detection.
 
 Since AWS and Digital Ocean and the primary providers we have used so far, we used regular expressions to generate the pattern for security token for both of them. We wrote the script detectToken.js which checks for the same and reports the output if there is a token present in the code.
 
 1. The conditions count and long method detection are run from the file 'analysis.js' and token detection is present in 'detectToken.js'.
-2. Go to Jenkins job -> Configure -> Build, add the below code to the existing steps
+2. Go to Jenkins job -> Configure -> Build, add the below code to the existing steps.
 
 ```
 node analysis.js
