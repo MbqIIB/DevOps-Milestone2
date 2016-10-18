@@ -142,6 +142,7 @@ npm test
 npm run lint || :
 ```
 
+Screencast for finding duplicate code
 ![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone2/blob/master/Screens/4_4.gif)
 
 
