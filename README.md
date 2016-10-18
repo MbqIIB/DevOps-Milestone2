@@ -112,7 +112,7 @@ Since AWS and Digital Ocean and the primary providers we have used so far, we us
 ##### BONUS (10 points): Detect duplicate code using an AST-based difference algorithm.
 
 
-![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone1/blob/master/Screens/4.gif)
+![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone2/blob/master/Screens/4.gif)
 
 
 #### Gates: Using hooks or post-build scripts, have the ability to reject a commit if it fails a minimum testing criteria (e.g. failed test case, or less than 50% statement coverage) and analysis criteria (e.g. cannot commits that generate a particular FindBugs rule, such as "Method concatenates strings using + in a loop").
