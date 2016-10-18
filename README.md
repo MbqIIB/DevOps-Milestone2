@@ -8,6 +8,8 @@ Team Members:
 
 We have used Jenkins to configure the build server. Alongwith Jenkins, we have used Tomcat, Git for Source Code Management and NPM as a package manager.
 
+Additions tools used: eslint, jsinspect, istanbul, cobertura, checkstyle, esprima
+
 We used the MIT licensed Climbing-Grade project which is forked at 
 ```
 https://github.com/shivamgulati1991/climbing-grade
