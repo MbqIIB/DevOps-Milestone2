@@ -10,7 +10,7 @@ We have used Jenkins to configure the build server. Alongwith Jenkins, we have u
 
 We used the MIT licensed Climbing-Grade project which is forked at 
 ```
-https://github.com/shivamgulati1991/climbing-grade.
+https://github.com/shivamgulati1991/climbing-grade
 ```
 
 #### Jenkins Job Creation Steps
@@ -136,4 +136,4 @@ Screencast for a successful commit after both testing and analysis pass
 Sources:
 
 1. https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins
-2. https://www.nczonline.net/blog/2015/10/triggering-jenkins-builds-by-url/
+2. https://github.com/Grantismo/climbing-grade.js
