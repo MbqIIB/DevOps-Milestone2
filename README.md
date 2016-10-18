@@ -111,6 +111,11 @@ Since AWS and Digital Ocean and the primary providers we have used so far, we us
 
 ##### BONUS (10 points): Detect duplicate code using an AST-based difference algorithm.
 
+We used the jsinspect library to detect the code duplication. The project's repository is 
+```
+https://github.com/danielstjules/jsinspect
+```
+We used the same and put on top of our code. jsinspect reports duplicate code as output.
 
 ![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone2/blob/master/Screens/4.gif)
 
