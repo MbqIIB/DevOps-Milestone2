@@ -115,7 +115,16 @@ We used the jsinspect library to detect the code duplication. The project's repo
 ```
 https://github.com/danielstjules/jsinspect
 ```
-We used the same and put on top of our code. jsinspect reports duplicate code as output.
+
+1. Go to Job-> Configure -> Build section, we add jsinspect command to run the matching algorithm.
+
+```
+rm -rf node_modules
+npm install
+jsinspect -t 30 ./
+npm test
+npm run lint || :
+```
 
 ![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone2/blob/master/Screens/4_4.gif)
 
