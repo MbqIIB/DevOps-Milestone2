@@ -125,12 +125,14 @@ All above 3 metrics are shown in this screencast.
 
 ##### BONUS (10 points): Detect duplicate code using an AST-based difference algorithm.
 
-We used the jsinspect library to detect the code duplication. The project's repository is 
+We used the jsinspect library to detect the code duplication. The dependency for the same was added to 'package.json' file installs the packages with 'npm install' during the build. The project's repository is 
 ```
 https://github.com/danielstjules/jsinspect
 ```
+For adding it to build process,
 
-1. Go to Job-> Configure -> Build section, we add 'jsinspect' command to run the code matching algorithm to find duplicates.
+1. Go to Job-> Configure -> Build section.
+2. We add 'jsinspect' command to run the code matching algorithm to find duplicates.
 
 ```
 rm -rf node_modules
