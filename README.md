@@ -130,7 +130,7 @@ Screencast for rejecting commit with analysis
 
 Screencast for a successful commit after both testing and analysis pass
 
-![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone2/blob/master/Screens/5_fail3.gif)
+![Screencast](https://github.com/shivamgulati1991/DevOps-Milestone2/blob/master/Screens/5_pass.gif)
 
 
 Sources:
